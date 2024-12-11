@@ -35,6 +35,9 @@ public class App {
         } else if (day.equals("9")) {
             System.out.println("part 1: " + Day9.part1());
             System.out.println("part 2: " + Day9.part2());
+        } else if (day.equals("10")) {
+            System.out.println("part 1: " + Day10.part1());
+            System.out.println("part 2: " + Day10.part2());
         }
     }
 }
