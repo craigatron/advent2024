@@ -90,7 +90,6 @@ public class Day17 {
 
             int instruction = program.get(program.size() - instructionIndex - 1);
 
-            System.out.println("instruction: " + instruction);
             for (int i = 0; i < 8; i++) {
                 String bin = Integer.toBinaryString(i);
                 while (bin.length() < 3) {
@@ -99,6 +98,7 @@ public class Day17 {
                 String fullBin = state + bin;
 
                 BigInteger val = new BigInteger(fullBin, 2);
+                // could probably generalize this now that I know it works but so tired
                 if (BigInteger.valueOf(instruction)
                         .equals(val.mod(EIGHT).xor(SIX).xor(
                                 val.divide(BigInteger.TWO.pow(val.mod(EIGHT).xor(SIX).intValue()))
