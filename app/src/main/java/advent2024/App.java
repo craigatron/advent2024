@@ -50,6 +50,15 @@ public class App {
         } else if (day.equals("14")) {
             System.out.println("part 1: " + Day14.part1());
             System.out.println("part 2: " + Day14.part2());
+        } else if (day.equals("15")) {
+            System.out.println("part 1: " + Day15.part1());
+            System.out.println("part 2: " + Day15.part2());
+        } else if (day.equals("16")) {
+            System.out.println("part 1: " + Day16.part1());
+            System.out.println("part 2: " + Day16.part2());
+        } else if (day.equals("17")) {
+            System.out.println("part 1: " + Day17.part1());
+            System.out.println("part 2: " + Day17.part2());
         }
     }
 }
