@@ -62,6 +62,12 @@ public class App {
         } else if (day.equals("18")) {
             System.out.println("part 1: " + Day18.part1());
             System.out.println("part 2: " + Day18.part2());
+        } else if (day.equals("19")) {
+            System.out.println("part 1: " + Day19.part1());
+            System.out.println("part 2: " + Day19.part2());
+        } else if (day.equals("20")) {
+            System.out.println("part 1: " + Day20.part1());
+            System.out.println("part 2: " + Day20.part2());
         }
     }
 }
