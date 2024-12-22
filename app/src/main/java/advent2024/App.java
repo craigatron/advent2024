@@ -4,70 +4,18 @@
 package advent2024;
 
 import java.io.IOException;
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
 
 public class App {
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws IOException, ClassNotFoundException,
+            NoSuchMethodException, IllegalAccessException, InvocationTargetException {
         String day = args[0];
-        if (day.equals("1")) {
-            System.out.println("part 1: " + Day1.part1());
-            System.out.println("part 2: " + Day1.part2());
-        } else if (day.equals("2")) {
-            System.out.println("part 1: " + Day2.part1());
-            System.out.println("part 2: " + Day2.part2());
-        } else if (day.equals("3")) {
-            System.out.println("part 1: " + Day3.part1());
-            System.out.println("part 2: " + Day3.part2());
-        } else if (day.equals("4")) {
-            System.out.println("part 1: " + Day4.part1());
-            System.out.println("part 2: " + Day4.part2());
-        } else if (day.equals("5")) {
-            System.out.println("part 1: " + Day5.part1());
-            System.out.println("part 2: " + Day5.part2());
-        } else if (day.equals("6")) {
-            System.out.println("part 1: " + Day6.part1());
-            System.out.println("part 2: " + Day6.part2());
-        } else if (day.equals("7")) {
-            System.out.println("part 1: " + Day7.part1());
-            System.out.println("part 2: " + Day7.part2());
-        } else if (day.equals("8")) {
-            System.out.println("part 1: " + Day8.part1());
-            System.out.println("part 2: " + Day8.part2());
-        } else if (day.equals("9")) {
-            System.out.println("part 1: " + Day9.part1());
-            System.out.println("part 2: " + Day9.part2());
-        } else if (day.equals("10")) {
-            System.out.println("part 1: " + Day10.part1());
-            System.out.println("part 2: " + Day10.part2());
-        } else if (day.equals("11")) {
-            System.out.println("part 1: " + Day11.part1());
-            System.out.println("part 2: " + Day11.part2());
-        } else if (day.equals("12")) {
-            System.out.println("part 1: " + Day12.part1());
-            System.out.println("part 2: " + Day12.part2());
-        } else if (day.equals("13")) {
-            System.out.println("part 1: " + Day13.part1());
-            System.out.println("part 2: " + Day13.part2());
-        } else if (day.equals("14")) {
-            System.out.println("part 1: " + Day14.part1());
-            System.out.println("part 2: " + Day14.part2());
-        } else if (day.equals("15")) {
-            System.out.println("part 1: " + Day15.part1());
-            System.out.println("part 2: " + Day15.part2());
-        } else if (day.equals("16")) {
-            System.out.println("part 1: " + Day16.part1());
-            System.out.println("part 2: " + Day16.part2());
-        } else if (day.equals("17")) {
-            System.out.println("part 1: " + Day17.part1());
-            System.out.println("part 2: " + Day17.part2());
-        } else if (day.equals("18")) {
-            System.out.println("part 1: " + Day18.part1());
-            System.out.println("part 2: " + Day18.part2());
-        } else if (day.equals("19")) {
-            System.out.println("part 1: " + Day19.part1());
-            System.out.println("part 2: " + Day19.part2());
-        } else if (day.equals("20")) {
-            System.out.println("part 1: " + Day20.part1());
-            System.out.println("part 2: " + Day20.part2());
-        }
+
+        Class<?> cls = Class.forName("advent2024.Day" + day);
+        Method p1 = cls.getMethod("part1");
+        Method p2 = cls.getMethod("part2");
+        System.out.println("part1: " + p1.invoke(null));
+        System.out.println("part2: " + p2.invoke(null));
     }
 }
